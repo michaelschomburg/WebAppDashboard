@@ -6,10 +6,10 @@
 // Colors
 
 $white: white;
-$color-primary: #5fe0c1;
-$color-secondary: #55defb;
-$color-text: rgb(136, 136, 136);
-$color-text--light: lighten(rgb(136, 136, 136), 25%);
+$color-primary: #47BCAB;
+$color-secondary: #2C8567;
+$color-text: $white;
+// $color-text--light:
 
 // button colors
 $button-colors: (
@@ -35,9 +35,9 @@ $grid-colors: (
 
 
 // Font Stacks
-$font-url--google: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900";
-$font-family--primary:  'Helvetica Neue' ,Helvetica, Arial, sans-serif;
-$font-family--secondary  :'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-url--google: "https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900";
+$font-family--secondary:  'Helvetica Neue' ,Helvetica, Arial, sans-serif;
+$font-family--primary  :'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 
 // Font Weights
@@ -50,12 +50,12 @@ $font-weight--ultra-bold : 900;
 
 // Text
 
-$base__font-size : 18px;
+$base__font-size : 16px;
 $base__line: 26px;
 $letter-space: 1px;
 
 // Breakpoints
-$brkpoint-sm: 1px;
+$brkpoint-sm: 320px;
 $brkpoint-md: 768px;
 $brkpoint-lg: 1024px;
 

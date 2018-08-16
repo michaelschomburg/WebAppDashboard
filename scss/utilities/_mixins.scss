@@ -15,12 +15,12 @@
 
 @mixin mq($break) {
   @if $break == "small" {
-    @media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+    @media (min-width: $brkpoint-sm) {
     @content;
     }
   }
  @else if $break == "medium" {
-    @media (min-width: $brkpoint-md + 1){
+    @media (min-width: $brkpoint-md){
     @content;
     }
   }
@@ -50,20 +50,20 @@
 
 
 // Grid mixin
-
-@mixin g-columns {
-  @for $i from 1 through $g-col-count {
-
-  $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
-  $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-
-  // Generate column modifier classes
-  &--#{$i} {
-    width: percentage($target / $context);
-    display: flex;
-    }
-  }
-}
+// 
+// @mixin g-columns {
+//   @for $i from 1 through $g-col-count {
+//
+//   $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+//   $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+//
+//   // Generate column modifier classes
+//   &--#{$i} {
+//     width: percentage($target / $context);
+//     display: flex;
+//     }
+//   }
+// }
 
 
 // text format mixin
@@ -73,17 +73,4 @@
   font-size: $size;
   line-height: $l-height;
   font-weight: $weight;
-}
-
-
-// grid colors
-@mixin grid-color() {
-  @each $theme, $color in $grid-colors{
-      &--#{$theme}.theme__colors {
-      background-color: $color;
-      color: $color-text;
-      padding: em(15px);
-      border-radius: $border-rd;
-      }
-    }
 }

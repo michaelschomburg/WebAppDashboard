@@ -1,0 +1,63 @@
+// =========================================
+//  Forms
+// =========================================
+
+.header {
+
+  @include flexy($dir: row, $just: space-between);
+  height: em(80px);
+  background-color: $color-primary;
+  padding: em(10px);
+
+  // App Name on the left side
+  @include e(name) {
+    align-self: center;
+    color: $color-text;
+    font-weight: $font-weight--thin;
+    font-size: em(24px);
+
+    .thicker {
+      font-weight: $font-weight--medium;
+    }
+  }
+
+  // Profile and Notification on the right side
+
+  @include e(profile) {
+    @include flexy($dir: row);
+    height: 100%;
+    align-items: center;
+
+      // Notification icon
+
+    @include m(icon) {
+      border-right: 1px solid $color-secondary;
+      padding: em(10px);
+      @include m(svg) {
+        color: $white;
+        height: em(30px);
+      }
+    }
+
+      // Profile Avatar
+
+    @include m(avatar) {
+      margin: 0 em(10px);
+      border-radius: 50%;
+      width: em(40px);
+      height: em(40px);
+    }
+
+    // Profile Name
+
+    @include m(name) {
+      display: none;
+      @include mq(medium){
+        @include flexy();
+        font-size: $base__font-size;
+        font-weight: $font-weight--thin;
+        color: $white;
+      }
+    }
+  }
+}
