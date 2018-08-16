@@ -1,17 +1,18 @@
 // =========================================
 //  Navigation
 // =========================================
-// .nav{
-//   @include flexy($dir: column);
-//   padding: 0;
-//   &__item{
-//     display: block;
-//       @extend %nav;
-//       @include mq(large) {
-//         margin-right: em(60px);
-//       }
-//   }
-//   @include mq(large) {
-//     @include flexy($dir: row);
-//   }
-// }
+.navigation {
+  @include flexy($just:space-between);
+  background-color: $color-secondary;
+  height: em(50px);
+  @include e(icon){
+  padding: em(10px);
+  width: em(50px);
+    @include m(svg) {
+      color: $nav-icon;
+    }
+  &:active {
+     border-bottom: 3px solid $color-highlight;
+    }
+  }
+}

@@ -307,6 +307,14 @@ ul {
 p {
   margin: 0; }
 
+.content__search__icon {
+  position: relative;
+  left: -1.5625em; }
+
+.content {
+  display: flex;
+  flex-direction: column; }
+
 .header {
   display: flex;
   flex-direction: row;
@@ -345,5 +353,18 @@ p {
           font-size: 16px;
           font-weight: 100;
           color: white; } }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2C8567;
+  height: 3.125em; }
+  .navigation__icon {
+    padding: 0.625em;
+    width: 3.125em; }
+    .navigation__icon--svg {
+      color: #ededed; }
+    .navigation__icon:active {
+      border-bottom: 3px solid #f2ec52; }
 
 /*# sourceMappingURL=style.css.map */
